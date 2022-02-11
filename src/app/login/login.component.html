@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>Login</h1>
+  <br>
+  <form #loginForm="ngForm" (submit)="onsubmit()">
+    <div class="form-group">
+      <label for="username">Username: </label>
+      <input type="text" name="username" [(ngModel)]="user.username" class="form-control" #username="ngModel"
+        required />
+      <span class="text-danger" [hidden]="username.valid || username.pristine">Required</span>
+    </div>
+    <div class="form-group">
+      <label for="">Password: </label>
+      <input type="password" name="password" [(ngModel)]="user.password" class="form-control" #password="ngModel"
+        required />
+      <span class="text-danger" [hidden]="password.valid || password.pristine">Required</span>
+    </div>
+    <input class="btn" [disabled]=" loginForm.invalid" type="submit" value="Login">
+  </form>
+</div>
+
+<style>
+  * {
+    margin: 0px auto;
+
+  }
+
+  .container {
+    margin: 70px auto;
+    display: grid;
+    place-items: center;
+    width: 500px;
+    background: #f5b4b0;
+  }
+
+  input.btn {
+    width: 100%;
+    background: #ff1100;
+    font-size: 20px;
+    padding: 11px;
+    color: #fff;
+    border: 0px;
+    margin: 10px 0px 20px;
+  }
+
+  .add {
+    background: #fff;
+    float: left;
+    width: 100%;
+    padding: 40px;
+    border-radius: 5px;
+  }
+</style>

@@ -1,0 +1,20 @@
+<div class="product-list">
+  <div class="container">
+    <div class="row">
+      <div class="pro"> <a class="btn btn-danger" [routerLink]="['/addProduct']">Add New Prdouct</a></div>
+      <div class="col-md-3" *ngFor="let product of productList">
+        <app-product-card [productData]="product" (getProductData)="addToFavList($event)"></app-product-card>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .btn {
+    margin: 20px;
+  }
+
+  .pro {
+    width: 90%;
+    float: right;
+  }
+</style>

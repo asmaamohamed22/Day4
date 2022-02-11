@@ -1,0 +1,23 @@
+<div class="container" style="width: 250px;height: 350px;">
+  <div class="card p-2 ">
+    <img src="assets/img/{{productData.image}}" />
+    <div class="card-body">
+      <h5 class="card-title">{{productData.title}}</h5>
+      <p class="card-text">{{ productData.decription | stringSlice: 30 }}</p>
+    </div>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-danger" (click)="getProduct(productData)">
+        <i class="fas fa-star"></i>
+      </button>
+    </div>
+  </div>
+</div>
+<style>
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    margin: 0 auto;
+  }
+</style>

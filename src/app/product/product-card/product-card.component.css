@@ -1,16 +1,18 @@
-.product {
-  /* border: 1px solid #333; */
+.container {
   border-radius: 10px;
-  width: 60%;
   margin: auto;
-  margin-bottom: 30px;
-  box-shadow: 7px 7px 10px;
-  background-color: white;
 }
-.product img {
-  object-fit: contain;
-  width: 100%;
+img {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
-.product .product-info {
-  padding: 0px 15px;
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  margin: 0 auto;
 }
